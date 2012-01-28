@@ -5,13 +5,13 @@
 </head>
 <body>
 <?php 
-$con = mysql_connect("localhost","root","re#RF12");/*syntex is "mysql_connect("server_name","user_name","password");"*/
+$con = mysql_connect("localhost","root","re#RF12");/*syntax is "mysql_connect("server_name","user_name","password");"*/
 if(!$con)
 	{
 	die('could not connect: '.mysql_error());	
     }
 /*mysql_query() function is used to send query or command to the MYSQL connection*/
-if(mysql_query("CREATE DATABASE sumit",$con)) /*syntex for creating database "CREATE DATABASE database_name"*/
+if(mysql_query("CREATE DATABASE sumit",$con)) /*syntax for creating database "CREATE DATABASE database_name"*/
 	{
 	echo "Database created";
 	}
@@ -27,7 +27,7 @@ FirstName varchar(15),
 PRIMARY KEY(personID),
 LastName varchar(15),
 Age int
-)";/*syntex for creating table is "CREATE TABLE table_name(column_name data_type)"*/
+)";/*syntax for creating table is "CREATE TABLE table_name(column_name data_type)"*/
 
 mysql_query($sql); //execute query
 mysql_query("INSERT INTO Persons (FirstName, LastName, Age)
