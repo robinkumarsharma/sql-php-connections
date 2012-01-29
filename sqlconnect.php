@@ -11,7 +11,7 @@ if(!$con)
 	die('could not connect: '.mysql_error());	
     }
 /*mysql_query() function is used to send query or command to the MYSQL connection*/
-if(mysql_query("CREATE DATABASE sumit",$con)) /*syntax for creating database "CREATE DATABASE database_name"*/
+if(mysql_query("CREATE DATABASE IF NOT EXISTS sumit",$con)) /*syntax for creating database "CREATE DATABASE database_name"*/
 	{
 	echo "Database created";
 	}
